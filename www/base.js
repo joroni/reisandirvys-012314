@@ -3,6 +3,8 @@ var nextpage = "#home";
 var view = "frontpage";
 var display = "poll";
 
+saveSettings();
+
 /* When this function is called, the phone has been initialized and is ready to roll */
 function onDeviceReady() {
 
@@ -51,10 +53,10 @@ function onDeviceReady() {
 }
 
 function saveSettings() {
-	baseurl = $("#baseurl").val();
+	baseurl = $("#baseurl").val(baseurl);
 	localStorage.baseUrl = baseurl;
-	localStorage.view = $("#view").val();
-	localStorage.display = $("#display").val();
+	localStorage.view = $("#view").val(view);
+	localStorage.display = $("#display").val(display);
 	alert("settings saved");
 }
 
