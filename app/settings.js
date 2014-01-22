@@ -6,7 +6,7 @@ drupalgap.settings = {};
  ***************/
  
 // Site Path
-drupalgap.settings.site_path = ''; // e.g. http://www.example.com
+drupalgap.settings.site_path = 'http://www.m.reisandirvys.com'; // e.g. http://www.example.com
 
 // Base Path
 drupalgap.settings.base_path = '/';
@@ -25,7 +25,7 @@ drupalgap.settings.clean_urls = false; // Setting to false is recommended.
  *************/
 
 // App Title
-drupalgap.settings.title = 'DrupalGap';
+drupalgap.settings.title = 'Reis & Irvys';
  
 // App Front Page
 drupalgap.settings.front = 'dashboard';
