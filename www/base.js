@@ -1,5 +1,7 @@
 var baseurl = "http://m.reisandirvys.com";
 var nextpage = "#home";
+var view = "frontpage";
+var display = "poll";
 
 /* When this function is called, the phone has been initialized and is ready to roll */
 function onDeviceReady() {
