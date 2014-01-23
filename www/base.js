@@ -1,5 +1,5 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#home";
+var nextpage = "#panel-fixed-page1";
 var view = "frontpage";
 var display = "poll";
 
@@ -46,7 +46,7 @@ function onDeviceReady() {
 		$("#footout").hide();
 	};
 
-	$.mobile.changePage("#home");
+	$.mobile.changePage("#panel-fixed-page1");
 
 }
 
@@ -55,7 +55,7 @@ function saveSettings() {
 	localStorage.baseUrl = baseurl;
 	localStorage.view = 'frontpage';
 	localStorage.display = 'poll';
-	alert("settings saved");
+	alert("Connected");
 }
 
 /*function saveSettings() {
