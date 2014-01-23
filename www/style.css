@@ -131,7 +131,7 @@ input.ui-input-text, textarea.ui-input-text {
     padding: 0;
 }
 
-.ui-bar-a, .ui-bar-d {
+.ui-bar-a, .ui-bar-b, .ui-bar-c, .ui-bar-d {
     background: url(images/header-tile.png) repeat-x !important;
 	/*background: linear-gradient(#F944AE, #EC068D) repeat scroll 0 0 #111111 !important;*/
     border-bottom: 1px solid #333333 !important;
@@ -156,7 +156,7 @@ p.preloader {
 #block-user-login, .login {
 	background:#FFF;
 	
-}
+}head
 
 form#user-login-form {
 	max-width: 400px;

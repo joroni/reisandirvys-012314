@@ -68,7 +68,7 @@ function saveSettings() {
 */
 function loginout() {
 	if (localStorage.localLogin != 3) {
-		$.mobile.changePage("#login");
+		$.mobile.changePage("#home");
 	} else {
 		logout();
 	}
@@ -184,7 +184,7 @@ function clearData() {
 function addStory() {
 	if (localStorage.localLogin != 3) {
 		nextpage = "#addstory";
-		$.mobile.changePage("#login");
+		$.mobile.changePage("#home");
 	} else {
 		$.mobile.changePage("#addstory");
 	};
