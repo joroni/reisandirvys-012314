@@ -16,7 +16,7 @@ function onDeviceReady() {
 	display = localStorage.display;
 
 	if (baseurl) {
-		$("#baseurl").val();
+		$("#baseurl").val(baseurl);
 	}
 
 	if (username) {
@@ -31,11 +31,11 @@ function onDeviceReady() {
 	};
 
 	if (view) {
-		$("#view").val();
+		$("#view").val(view);
 	};
 
 	if (display) {
-		$("#display").val();
+		$("#display").val(display);
 	};
 
 	if (localStorage.localLogin == 3) {
