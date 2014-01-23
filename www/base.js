@@ -16,7 +16,7 @@ function onDeviceReady() {
 	display = localStorage.display;
 
 	if (baseurl) {
-		$("#baseurl").val("http://www.m.reisandirvys.com");
+		$("#baseurl").val();
 	}
 
 	if (username) {
@@ -31,11 +31,11 @@ function onDeviceReady() {
 	};
 
 	if (view) {
-		$("#view").val("frontpage");
+		$("#view").val();
 	};
 
 	if (display) {
-		$("#display").val("poll");
+		$("#display").val();
 	};
 
 	if (localStorage.localLogin == 3) {
@@ -51,13 +51,21 @@ function onDeviceReady() {
 }
 
 function saveSettings() {
-	baseurl = $("#baseurl").val();
+	baseurl = 'http://www.m.reisandirvys.com';
 	localStorage.baseUrl = baseurl;
-	localStorage.view = $("#view").val();
-	localStorage.display = $("#display").val();
+	localStorage.view = 'frontpage';
+	localStorage.display = 'poll';
 	alert("settings saved");
 }
 
+/*function saveSettings() {
+	baseurl = $("#baseurl").val(baseurl);
+	localStorage.baseUrl = baseurl;
+	localStorage.view = $("#view").val(frontpage);
+	localStorage.display = $("#display").val(poll);
+	alert("settings saved");
+}
+*/
 function loginout() {
 	if (localStorage.localLogin != 3) {
 		$.mobile.changePage("#login");
@@ -189,3 +197,4 @@ function onBodyLoad() {
 function isNumeric(input) {
 	return (input - 0) == input && input > 0;
 }
+ saveSettings();
