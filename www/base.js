@@ -1,4 +1,4 @@
-var baseurl = "http://m.reisandirvys.com";
+var baseurl = "http://www.m.reisandirvys.com";
 var nextpage = "#home";
 var view = "frontpage";
 var display = "poll";
@@ -18,32 +18,51 @@ function onDeviceReady() {
 	view = localStorage.view;
 	display = localStorage.display;
 
-	baseurl = 'http://www.m.reisandirvys.com';
-	nextpage = '#home';
-	view = 'frontpage';
-	display = 'poll';
 
+	if (baseurl) {
+
+		//$("#baseurl").val(baseurl);
 		$("#baseurl").val(baseurl);
-	
 
-	
+	}
+
+
+
+	if (username) {
+
 		$("#username").val(username);
-	
 
+	}
+
+
+
+	if (title) {
 
 		$("#storytitle").val(title);
 
+	};
+
+	if (story) {
 
 		$("#story").val(story);
 
+	};
 
+
+
+	if (view) {
 
 		$("#view").val(view);
 
+	};
 
+
+
+	if (display) {
 
 		$("#display").val(display);
 
+	};
 
 	if (localStorage.localLogin == 3) {
 		$("#logoutli").show();
