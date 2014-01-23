@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title>Reiv &amp; Irvys</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+ <link href="font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="jquery.mobile-1.0b2.min.css" />
+    <link rel="stylesheet" href="drupalgap.css" />
+   <!-- <script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.0b2.min.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" src="base.js"></script>
+    
+    
+    <link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<script>
+        $(document).ready(function() {
+            // Set the initial window (assuming it will always be #1
+            window.now = 1;
+            //get an Array of all of the pages and count
+            windowMax = $('div[data-role="page"]').length; 
+           $('.swipeArea').bind('swipeleft', turnPage);
+           $('.swipeArea').bind('swiperight', turnPageBack);
+        });
+        // Named handlers for binding page turn controls
+        function turnPage(){
+            // Check to see if we are already at the highest numbers page            
+            if (window.now < windowMax) {
+                window.now++
+                $.mobile.changePage("#device"+window.now, "slide", false, true);
+            }
+        }
+        function turnPageBack(){
+            // Check to see if we are already at the lowest numbered page
+            if (window.now != 1) {
+                window.now--;
+                $.mobile.changePage("#device"+window.now, "slide", true, true);
+            }
+        }
+        </script>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+  
+  </head>
+  <body onload="onBodyLoad();">
+ <!-- <script>
+  alert (baseurl);
+  </script>-->
+    
+    <!-- Start of loading page -->
+    <div data-role="page" id="loading">
+      <div data-role="header" data-id="bhead" data-theme="d">
+        <h1>Loading</h1>
+        <div id="main-menu-left" data-role="controlgroup" data-type="horizontal"  data-iconpos="left" data-mini="false" data-theme="a">
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home btn btn-default">
+                        <i class="fa fa-home fa-3x"></i>
+                    </a>
+        <a href="#info" data-icon="info" class="ui-btn-right"><i class="fa fa-info-circle fa-3x"></i></a>
+      </div>
+      </div>
+      <!-- /header -->
+      <div data-role="content">
+        <div class="ui-body ui-body-c">
+          <p>
+            <strong>Welcome to DrupalGap</strong>
+          </p>
+          <p>
+            Loading 
+          </p>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of home page -->
+    <div data-role="page" id="home">
+    
+    <a class="ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-c" data-mini="true" data-inline="true" data-role="button" href="#leftpanel2" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner">
+<span class="ui-btn-text">Push</span>
+</span>
+</a>
+    <div data-role="panel" id="leftpanel2">
+     <li><a href="#">List item 1</a></li>
+        <li><a href="#">List item 2</a></li>
+        <li><a href="#">List item 3</a></li>
+	</div><!-- /panel -->
+      <div data-role="header" data-position="fixed" data-id="bhead" data-theme="d">
+        
+        
+        <h1>Home</h1>
+      <!-- <div id="main-menu-left" data-role="controlgroup" data-type="horizontal"  data-iconpos="left" data-mini="false" data-theme="a">
+        <a href="#home" id="home" class="btn btn-default">
+                        <i class="fa fa-home fa-3x"></i>
+                    </a>
+        <a href="#info" id="home" class="btn btn-default"><i class="fa fa-info-circle fa-2x"></i></a>
+     </div>-->
+     
+      </div>
+ <!--     <div data-role="navigation" data-position="fixed" data-id="bhead" data-theme="d">
+        <div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="d">
+    <h4>Heading</h4>
+    <ul data-role="listview">
+        <li><a href="#">List item 1</a></li>
+        <li><a href="#">List item 2</a></li>
+        <li><a href="#">List item 3</a></li>
+    </ul>
+</div>
+</div>-->
+      <!-- /header -->
+      <div data-role="content" class="ui-content">
+        <div class="ui-body ui-body-c">
+          <p>
+            Welcome Reis & Irvy's. We would like to hear from you.
+          </p>
+          <ul data-role="listview" data-inset="true" data-theme="d">
+            <li>
+              <a onClick="how();">Getting started</a>
+            </li>
+            <li>
+              <a onClick="addStory();">Upload an article</a>
+            </li>
+            <li>
+              <a onClick="listArticles();">View articles</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of How It Works page -->
+    <div data-role="page" id="howitworks">
+      <div data-role="header" data-id="bhead" data-theme="d">
+        <h1>How It Works</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div data-role="content">
+        <div class="ui-body ui-body-c">
+          <p>
+            <strong>Welcome to DrupalGap</strong>
+          </p>
+          <p>
+            Welcome to DrupalGap
+          </p>
+          <p>
+            With this app you can upload stories from your mobile to your drupal site.
+          </p>
+          <p>
+            <strong>Quick step guide to getting started</strong>
+          </p>
+          <p>
+            1. Install the phone gap drupal module on your Drupal site
+            <br/>
+            2. Enable the module and make sure your user has permissions to create content from mobile
+            <br/>
+            3. Enable the views module and for a default view you can enable the frontpage view
+            <br/>
+            4. Go to settings (below). Enter the URL of your site, the name of the view to dislay content and the name of the views display 
+            <br/>
+            5. When you go to the upload content area you will be promted to enter your username and password, which you must do before continuing.
+            <br/>
+            6. Go to the Upload and article page and submit your article
+          </p>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of Login page -->
+    <div data-role="page" id="login">
+      <div data-role="header" data-id="bhead" data-theme="d">
+        <h1>Login to Drupal</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div data-role="content" class="ui-content">
+        <div class="ui-body ui-body-c">
+          <p>
+           You must first register at your Drupal site. Once you have your username and password, return to this page and save your details in the box below.
+          </p>
+          <p>
+            Please enter your Drupal username <input id="username" type="text">
+            </input>
+          </p>
+          <p>
+            Please enter your Drupal password <input id="password" type="password">
+            </input>
+          </p>
+          <div id="logmsg">
+          </div>
+          <p>
+            <a data-role="button" onclick="saveLogin();" data-theme="d">Login</a>
+          </p>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+  
+    <!-- Start of articles page -->
+    <div data-role="page" id="stories">
+      <div data-role="header" data-id="bhead" data-theme="d">
+        <h1>Latest Articles</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div id = "latestlist" data-role="content">
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        <a id="footout" onMouseDown="Account();" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of add Articles page -->
+    <div data-role="page" id="addstory">
+      <div data-role="header" data-id="bhead" data-theme="d">
+        <h1>Add Article</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div id = "addstorydiv" data-role="content">
+        <div id = "stitle" class="rounded left">
+          Title
+        </div>
+        <input id ="storytitle" type="text" class="textround" name="storytitle" />
+        <br/>
+        <textarea id="story" class="arearound" style="overflow-y:scroll;" NAME="story" COLS=45 ROWS=8 ></textarea>
+        <br/>
+        <div id="result">
+        </div>
+        <br />
+        <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="d">
+        </a><a data-role="button" data-theme="d" onclick="sendStory();"/>Send
+      </a>
+    </div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" data-id="bfoot" data-theme="d">
+      <h4>DrupalGap</h4>
+    </div>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+  
+  <!-- Start of info page -->
+  <div data-role="page" id="info">
+    <div data-role="header" data-id="bhead" data-theme="d">
+      <h1>Info</h1>
+      <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+      <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+      <div class="ui-body ui-body-c">
+        <p>
+          This project and code is supplied under GPL license without any guarantees
+        </p>
+        <p>
+          The aim is to support two great initiatives: Drupal and Phonegap
+        </p>
+        <p>
+          For more information go to <a href='http://www.aeondada.com/drupalgap'>www.aeondada.com</a>
+          <br/>
+        </p>
+      </div>
+    </div>
+    <!-- /content -->
+    <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+      <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+      
+      <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+    </div>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+  
+  <!-- Start of settings page -->
+  <div data-role="page" id="settings">
+    <div data-role="header" data-id="bhead" data-theme="d">
+      <h1>Settings</h1>
+      <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+      <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+      <div class="ui-body ui-body-c">
+       Enter URL of your Drupal site e.g.
+       <br /><strong>http://www.mydrupalsite.com</strong>
+       <br />(no trailing forward slash / ) 
+        <br/>
+        <input id="baseurl" type="text" value="">
+            </input>
+        <br/>
+               Enter 'view' used for retreiving articles e.g. <strong>frontpage</strong> (you must enable this view if you want o use it from with Drupal)
+        <br/>
+        <input id="view" type="text" value="">
+            </input>
+        <br/>
+               Enter the view 'display' you want to use for listing articles e.g. <strong>page</strong>
+        <br/>
+        <input id="display" type="text" value="">
+            </input>
+        <br/>
+        <a data-role="button" data-theme="d" onclick="saveSettings();">Save settings</a>
+      </div>
+    </div>
+    <!-- /content -->
+
+  </div>
+  <!-- /page -->
+  
+  <!-- Start of sending page -->
+  <div data-role="page" id="sending">
+    <div data-role="header" data-id="bhead" data-theme="d">
+      <h1>Sending Story</h1>
+      <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+      <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+      <div class="ui-body ui-body-c">
+        <div id="sentmessage">
+          your story is being sent. If this message does not disappear in 2 minutes, please check your connection and try again.
+        </div>
+        <br/>
+        <div id="storylist">
+        </div>
+      </div>
+    </div>
+    <!-- /content -->
+    <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="d">
+      <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+      <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+    </div>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+  </body>
+</html>

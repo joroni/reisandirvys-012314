@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Start with core styles outside of a media query that apply to mobile and up */
+/* Global typography and design elements, stacked containers */
+body { font-family: 'Open Sans', Helvetica, san-serif; }
+H1 { color: #fff; }
+a:link { color:#eee; }
+
+a#home.btn i.fa:visited { color:#fff !important; }
+
+/* Stack the two content containers */
+.main,
+.sidebar { display:block; width:100%; }
+
+/* First breakpoint at 576px */
+/* Inherits mobile styles, but floats containers to make columns */
+@media all and (min-width: 36em){
+	.main { float: left; width:60%; }
+	.sidebar { float: left; width:40%; }
+}
+
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweaks base H1 */
+@media all and (min-width: 50em){
+	.main { width:70%; }
+	.sidebar { width:30%; }
+
+	/* You can also tweak any other styles in a breakpoint */
+	H1 { color: #FFF; font-size:1.2em }
+}
+
+ body, div[data-role="page"], div[data-role="content"], .swipeArea {
+                height: 95%;
+				overflow:hidden;
+				color: #333333;
+				font-family: 'Open Sans',sans-serif;
+				font-size: 120%;
+				font-weight: 300;
+				line-height: 135%;
+				margin-bottom: 0.5em;
+				margin-top: -0.5em;
+				padding-bottom: 2.6em;
+				box-shadow: 0 1px 5px #AAAAAA;
+	 }
+div[data-role="header"] {
+	padding:20px;
+    position: relative !important;
+    z-index: 200000 !important;
+}
+
+img.logo {
+	margin:0 auto !important;
+}
+
+div#splashscreen.ui-page div.ui-content{
+			background:url(images/screen-hdpi-portrait.jpg) repeat scroll transparent !important;
+			padding-top:300px;
+			
+		}
+
+div.ui-content {
+	margin-top:10px;
+}
+
+input.ui-input-text, textarea.ui-input-text {
+    background-image: none !important;
+  }
+	
+
+.ui-body-d, .ui-dialog.ui-overlay-d {
+			background:url(images/screen-hdpi-portrait-lite.jpg) repeat scroll center transparent !important;
+		}
+
+
+
+
+.ui-header .ui-title, .ui-footer .ui-title {
+    display: block;
+    font-family: 'Open Sans',san-serif !important;
+    font-size: 30px !important;
+    font-weight: normal;
+    margin: 0.3em !important;
+    min-height: 2em;
+    outline: 0 none !important;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 1px -1px 1px #555555;
+    white-space: nowrap;
+}
+
+.ui-header, .ui-footer, .ui-page-fullscreen .ui-header, .ui-page-fullscreen .ui-footer {
+    border-left-width: 0;
+    border-right-width: 0;
+    height: 50px !important;
+    overflow: hidden;
+    padding-top: 10px !important;
+    position: absolute;
+    width: 100%;
+}
+
+.ui-btn-text {
+	font-size: 0.7em !important;
+}
+.ui-controlgroup, fieldset.ui-controlgroup {
+    margin: 0em 0 1em !important;
+    padding: 0;
+}
+
+.ui-bar-a, .ui-bar-d {
+    background: url(images/header-tile.png) repeat-x !important;
+	/*background: linear-gradient(#F944AE, #EC068D) repeat scroll 0 0 #111111 !important;*/
+    border-bottom: 1px solid #333333 !important;
+    box-shadow: 0 1px 12px #FFFFFF;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-shadow: 0 0 1px #000000;
+    z-index: 200000;
+}
+
+.ui-bar-a a:visited {color:#fff !important;}
+
+p.preloader {
+    background-color: #000000;
+    border-radius: 10px;
+    height: 30px;
+    opacity: 0.5;
+    padding: 0 4px 10px;
+    width: 30px;
+	}
+
+#block-user-login, .login {
+	background:#FFF;
+	
+}
+
+form#user-login-form {
+	max-width: 400px;
+	padding:20px;
+	margin: 0 auto;
+}
+
+
+form#user-login-form.user-login-form div ul li {
+    line-height: 1em;
+    list-style: none outside none;
+    margin-left: -35px;
+}
+
+form#user-login-form.user-login-form div ul li a.ui-link {
+	font-size: 0.5em;
+    font-weight: normal;
+    text-decoration: none;
+	
+}
+
+a#home.ui-btn-icon-left .ui-btn-inner {
+  	border: medium none;
+    height: 30px;
+    padding: 5px;
+    width: 30px;
+}
+
+
+a#home {
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.jqm-content > h1 {
+    clear: both;
+    color: #333333 !important;
+    font-family: 'Open Sans',sans-serif!important;
+    font-size: 2.4em!important;
+    font-weight: 300!important;
+}
+
+
+.jqm-list .ui-btn-inner, .ui-btn {
+    font-family: 'Open Sans',sans-serif !important;
+    font-size: 0.95em !important;
+    font-weight: 300 !important;
+}
+
