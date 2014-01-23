@@ -3,9 +3,6 @@ var nextpage = "#home";
 var view = "frontpage";
 var display = "poll";
 
-
-
-
 /* When this function is called, the phone has been initialized and is ready to roll */
 function onDeviceReady() {
 
@@ -18,50 +15,27 @@ function onDeviceReady() {
 	view = localStorage.view;
 	display = localStorage.display;
 
-
 	if (baseurl) {
-
-		//$("#baseurl").val(baseurl);
-		$("#baseurl").val(baseurl);
-
+		$("#baseurl").val("http://www.m.reisandirvys.com");
 	}
-
-
 
 	if (username) {
-
 		$("#username").val(username);
-
 	}
 
-
-
 	if (title) {
-
 		$("#storytitle").val(title);
-
 	};
-
 	if (story) {
-
 		$("#story").val(story);
-
 	};
-
-
 
 	if (view) {
-
-		$("#view").val(view);
-
+		$("#view").val("frontpage");
 	};
 
-
-
 	if (display) {
-
-		$("#display").val(display);
-
+		$("#display").val("poll");
 	};
 
 	if (localStorage.localLogin == 3) {
@@ -77,14 +51,12 @@ function onDeviceReady() {
 }
 
 function saveSettings() {
-	baseurl = $("#baseurl").val(baseurl);
+	baseurl = $("#baseurl").val();
 	localStorage.baseUrl = baseurl;
-	localStorage.view = $("#view").val(view);
-	localStorage.display = $("#display").val(display);
-	alert("Connected");
+	localStorage.view = $("#view").val();
+	localStorage.display = $("#display").val();
+	alert("settings saved");
 }
-
-
 
 function loginout() {
 	if (localStorage.localLogin != 3) {
@@ -211,13 +183,9 @@ function addStory() {
 }
 
 function onBodyLoad() {
-	//document.addEventListener("deviceready", saveSettings, false);
-	
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 function isNumeric(input) {
 	return (input - 0) == input && input > 0;
 }
-
-saveSettings();
