@@ -18,7 +18,7 @@ function onDeviceReady() {
 	view = localStorage.view;
 	display = localStorage.display;
 
-	baseurl = 'http://m.reisandirvys.com';
+	baseurl = 'http://www.m.reisandirvys.com';
 	nextpage = '#home';
 	view = 'frontpage';
 	display = 'poll';
