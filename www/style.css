@@ -27,8 +27,13 @@ a#home.btn i.fa:visited { color:#fff !important; }
 	.sidebar { width:30%; }
 
 	/* You can also tweak any other styles in a breakpoint */
-	H1 { color: #FFF; font-size:1.2em }
+	H1 { collor: #FFFFFF;
+    font-size: 1.2em !important;
+    font-weight: normal;
+    line-height: 1.5em;
+	float:right;
 }
+
 
  body, div[data-role="page"], div[data-role="content"], .swipeArea {
                 height: 95%;
@@ -37,16 +42,31 @@ a#home.btn i.fa:visited { color:#fff !important; }
 				font-family: 'Open Sans',sans-serif;
 				font-size: 120%;
 				font-weight: 300;
-				line-height: 135%;
+				line-height: 100%;
 				margin-bottom: 0.5em;
 				margin-top: -0.5em;
 				padding-bottom: 2.6em;
 				box-shadow: 0 1px 5px #AAAAAA;
 	 }
-div[data-role="header"] {
+/*div[data-role="header"] {
 	padding:20px;
     position: relative !important;
     z-index: 200000 !important;
+}
+*/
+
+div.ui-header div.btn-group {
+    left: 20px;
+    position: absolute;
+    top: 5px;
+	border-radius: 30px;
+    display: inline-block;
+    font-size: 35px;
+    margin: 10px;
+}
+
+div.ui-header div.btn-group i {
+	margin-right:10px;
 }
 
 img.logo {
@@ -58,6 +78,8 @@ div#splashscreen.ui-page div.ui-content{
 			padding-top:300px;
 			
 		}
+
+/* Same CSS as above, plus */ .icon-alone { display: inline-block; /* Chrome 19 was weird with clickability without this */ } .screen-reader-text { /* Reusable, toolbox kind of class */ position: absolute; top: -9999px; left: -9999px; }
 
 div.ui-content {
 	margin-top:10px;
@@ -78,8 +100,8 @@ input.ui-input-text, textarea.ui-input-text {
 .ui-header .ui-title, .ui-footer .ui-title {
     display: block;
     font-family: 'Open Sans',san-serif !important;
-    font-size: 30px !important;
-    font-weight: normal;
+    font-size: 22px !important;
+    /*font-weight: normal;
     margin: 0.3em !important;
     min-height: 2em;
     outline: 0 none !important;
@@ -87,15 +109,15 @@ input.ui-input-text, textarea.ui-input-text {
     text-align: center;
     text-overflow: ellipsis;
     text-shadow: 1px -1px 1px #555555;
-    white-space: nowrap;
+    white-space: nowrap;*/
 }
 
 .ui-header, .ui-footer, .ui-page-fullscreen .ui-header, .ui-page-fullscreen .ui-footer {
     border-left-width: 0;
     border-right-width: 0;
-    height: 50px !important;
+   /* height: 50px !important;
     overflow: hidden;
-    padding-top: 10px !important;
+    padding-top: 10px !important;*/
     position: absolute;
     width: 100%;
 }
@@ -142,20 +164,20 @@ form#user-login-form {
 }
 
 
-form#user-login-form.user-login-form div ul li {
+form#user-login-form.user-login-form div ul li, div#login.ui-page div.ui-content div.ui-body ul li{
     line-height: 1em;
     list-style: none outside none;
     margin-left: -35px;
 }
 
-form#user-login-form.user-login-form div ul li a.ui-link {
+form#user-login-form.user-login-form div ul li a.ui-link, div#login.ui-page div.ui-content div.ui-body ul li  a{
 	font-size: 0.5em;
     font-weight: normal;
     text-decoration: none;
 	
 }
 
-a#home.ui-btn-icon-left .ui-btn-inner {
+a#home.ui-btn-icon-left .ui-btn-inner, {
   	border: medium none;
     height: 30px;
     padding: 5px;
@@ -163,7 +185,7 @@ a#home.ui-btn-icon-left .ui-btn-inner {
 }
 
 
-a#home {
+a#home, a#user, a#info{
     border-radius: 30px;
     display: inline-block;
     font-size: 12px;
@@ -174,14 +196,14 @@ a#home {
     clear: both;
     color: #333333 !important;
     font-family: 'Open Sans',sans-serif!important;
-    font-size: 2.4em!important;
+    font-size: 2em!important;
     font-weight: 300!important;
 }
 
 
 .jqm-list .ui-btn-inner, .ui-btn {
     font-family: 'Open Sans',sans-serif !important;
-    font-size: 0.95em !important;
-    font-weight: 300 !important;
+   font-size: 0.80em !important;
+   font-weight:normal;
 }
 
