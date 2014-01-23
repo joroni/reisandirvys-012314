@@ -211,7 +211,7 @@ function addStory() {
 }
 
 function onBodyLoad() {
-	document.addEventListener("deviceready", saveSettings, false);
+	//document.addEventListener("deviceready", saveSettings, false);
 	
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
@@ -219,3 +219,5 @@ function onBodyLoad() {
 function isNumeric(input) {
 	return (input - 0) == input && input > 0;
 }
+
+saveSettings();
