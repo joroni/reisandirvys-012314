@@ -1,5 +1,5 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#panel-fixed-page1";
+var nextpage = "#home";
 var view = "frontpage";
 var display = "poll";
 
@@ -46,7 +46,7 @@ function onDeviceReady() {
 		$("#footout").hide();
 	};
 
-	$.mobile.changePage("#panel-fixed-page1");
+	$.mobile.changePage("#login");
 
 }
 
@@ -77,14 +77,14 @@ function loginout() {
 function listArticles() {
 	url = baseurl + '/phonegap/display_view';
 	$username = '';
-	$("#latestlist").html("retrieving data. you must <br/><br/>enable the view in drupal <br/><br/>set the mobile settings page (below)<br/><br/>enable the default views frontage is good starting point ");
+	$("#latestlist").html("Retrieving Data...");
 	$.post(url, {
 		username : $username,
 		view : localStorage.view,
 		display : localStorage.display
 	}, function(data) {
 		if (data == '') {
-			data = "you must <br/><br/>enable the view in drupal <br/><br/>set the mobile settings page (below)<br/><br/>enable the default views frontage is good starting point "
+			data = "Connection Error"
 		};
 		$("#latestlist").html(data);
 
@@ -105,7 +105,7 @@ function saveLogin() {
 		};
 	};
 	var saybi = function(data) {
-		$("#logmsg").html("dada connect error ");
+		$("#logmsg").html("connection error ");
 	};
 	if (username) {
 		localStorage.phonegapName = username;
@@ -177,7 +177,7 @@ function clearData() {
 	localStorage.localLogin = 5;
 	$("#username").val("");
 	$("#password").val("");
-	$("#logoutlia").val("Login");
+	$("#logoutlia").val("#login");
 	clearStoryData();
 }
 
