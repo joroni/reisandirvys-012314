@@ -4,7 +4,9 @@
 /* Start with core styles outside of a media query that apply to mobile and up */
 /* Global typography and design elements, stacked containers */
 body { font-family: 'Open Sans', Helvetica, san-serif; }
-H1 { color: #fff; }
+H1 { color: #fff;
+float:right !important;
+	}
 a:link { color:#eee; }
 
 a#home.btn i.fa:visited { color:#fff !important; }
@@ -31,7 +33,7 @@ a#home.btn i.fa:visited { color:#fff !important; }
     font-size: 1.2em !important;
     font-weight: normal;
     line-height: 1.5em;
-	float:right;
+	float:right !important;
 }
 
 
@@ -65,6 +67,10 @@ div.ui-header div.btn-group {
     margin: 10px;
 }
 
+.fa-2x {
+    float: left !important;
+   
+}
 
 div.ui-header div.btn-group i, div.ui-footer div.btn-group i {
 	margin-right:10px;
