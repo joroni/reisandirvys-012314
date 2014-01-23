@@ -65,7 +65,8 @@ div.ui-header div.btn-group {
     margin: 10px;
 }
 
-div.ui-header div.btn-group i {
+
+div.ui-header div.btn-group i, div.ui-footer div.btn-group i {
 	margin-right:10px;
 }
 

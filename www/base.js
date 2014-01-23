@@ -75,7 +75,7 @@ function loginout() {
 }
 
 function listArticles() {
-	url = baseurl + 'http://m.reisandirvys.com/phonegap/display_view';
+	url = baseurl + '/phonegap/display_view';
 	$username = '';
 	$("#latestlist").html("retrieving data. you must <br/><br/>enable the view in drupal <br/><br/>set the mobile settings page (below)<br/><br/>enable the default views frontage is good starting point ");
 	$.post(url, {
