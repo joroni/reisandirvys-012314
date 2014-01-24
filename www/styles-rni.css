@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Start with core styles outside of a media query that apply to mobile and up */
+/* Global typography and design elements, stacked containers */
+body { font-family: 'Open Sans', Helvetica, san-serif !important; }
+
+
+div[data-role="header"] {
+	 /* background: none repeat scroll 0 0 #000000 !important;*/
+    border-bottom: 1px solid #FFFFFF;
+    max-height: 50px !important;
+    min-height: 40px !important;
+	/*background:#710067 !important;*/
+	
+}
+
+div[data-role="footer"] {
+	display:none !important;
+	
+}
+	
+
+
+div[data-role="retail"] {
+	display:none !important;
+	
+}
+
+.ui-bar-a, .ui-bar-b, .ui-bar-c, .ui-bar-d, .ui-header {
+    background: url(images/header-tile.png) repeat-x !important;
+	/*background: linear-gradient(#F944AE, #EC068D) repeat scroll 0 0 #111111 !important;*/
+ /*   border-bottom: 1px solid #333333 !important;*/
+	 border-bottom: 1px solid #FFFFFF;
+   
+}
+
+.fa-2x {
+    font-size: 2em;
+    margin-right: 25px;
+    margin-top: 0;
+    position: absolute;
+    z-index: 2000000;
+}
+
+div.btn-group a.btn {
+   padding: 0 10px;
+   color:#eee !important;
+   text-shadow:0 1px 0 #000 !important;
+}
+
+
+.sb-home {
+    background: url("images/icons-slic/icon-home.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display:inline-block;
+    height: 50px;
+    width: 50px;
+}
+	
+.sb-user {
+	 background: url("images/icons-slic/icon-user.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+     display:inline-block;
+    height: 50px;
+    width: 50px;
+	}
+
+
+.sb-info {
+	 background: url("images/icons-slic/icon-info.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+     display:inline-block;
+    height: 50px;
+    width: 50px;
+	}
