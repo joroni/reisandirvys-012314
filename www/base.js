@@ -1,7 +1,7 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#home";
+var nextpage = "#login";
 var view = "frontpage";
-var display = "poll";
+var display = "polls";
 
 /* When this function is called, the phone has been initialized and is ready to roll */
 function onDeviceReady() {
@@ -46,7 +46,7 @@ function onDeviceReady() {
 		$("#footout").hide();
 	};
 
-	$.mobile.changePage("#login");
+	$.mobile.changePage("#home");
 
 }
 
@@ -54,8 +54,8 @@ function saveSettings() {
 	baseurl = 'http://www.m.reisandirvys.com';
 	localStorage.baseUrl = baseurl;
 	localStorage.view = 'frontpage';
-	localStorage.display = 'poll';
-	alert("Connected");
+	localStorage.display = 'polls';
+	//alert("Connected");
 }
 
 /*function saveSettings() {
@@ -76,6 +76,7 @@ function loginout() {
 
 function listArticles() {
 	url = baseurl + '/phonegap/display_view';
+	//url = baseurl + '/phonegap/frontpage';
 	$username = '';
 	$("#latestlist").html("Retrieving Data...");
 	$.post(url, {
@@ -92,6 +93,8 @@ function listArticles() {
 	$.mobile.changePage("#stories");
 }
 
+
+
 function saveLogin() {
 	username = $("#username").val();
 	password = $("#password").val();
@@ -101,7 +104,7 @@ function saveLogin() {
 		if (data.status == "ok") {
 			localStorage.localLogin = 3;
 			localStorage.hash = data.hash;
-			$.mobile.changePage(nextpage);
+			$.mobile.changePage("#home");
 		};
 	};
 	var saybi = function(data) {
@@ -111,7 +114,7 @@ function saveLogin() {
 		localStorage.phonegapName = username;
 		if (password) {
 			localStorage.phonegapPass = password;
-			$("#logmsg").html("setting locally saved for " + username + "trying to contact server ...");
+			$("#logmsg").html("Settings for " + username + "trying to contact server ...");
 			purl = baseurl + '/phonegap/login';
 			$.ajax({
 				type : 'POST',
