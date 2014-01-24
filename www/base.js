@@ -55,11 +55,9 @@ function saveSettings() {
 	localStorage.baseUrl = baseurl;
 	localStorage.view = 'frontpage';
 	localStorage.display = 'polls';
-<<<<<<< HEAD
+
 	//alert("Connected");
-=======
-	alert("Connected");
->>>>>>> 93e1d8ca4c75c9276b05e7205f27b8f4fff3f6f7
+
 }
 
 /*function saveSettings() {
