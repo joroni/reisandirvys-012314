@@ -1,7 +1,7 @@
 var baseurl = "http://www.m.reisandirvys.com";
 var nextpage = "#login";
 var view = "frontpage";
-var display = "page";
+var display = "poll";
 
 /* When this function is called, the phone has been initialized and is ready to roll */
 function onDeviceReady() {
@@ -58,7 +58,7 @@ function saveSettings() {
 	baseurl = 'http://www.m.reisandirvys.com';
 	localStorage.baseUrl = baseurl;
 	localStorage.view = 'frontpage';
-	localStorage.display = 'page';
+	localStorage.display = 'poll';
 
 	//alert("Connected");
 
