@@ -1,7 +1,7 @@
 var baseurl = "http://www.m.reisandirvys.com";
 var nextpage = "#login";
 var view = "frontpage";
-var display = "polls";
+var display = "page";
 
 /* When this function is called, the phone has been initialized and is ready to roll */
 function onDeviceReady() {
@@ -40,10 +40,14 @@ function onDeviceReady() {
 
 	if (localStorage.localLogin == 3) {
 		$("#logoutli").show();
+		$("#logout").show(); // CUSTOM
 		$("#loginli").hide();
+		$("#login").hide(); // CUSTOM
+		
 	} else {
 
 		$("#footout").hide();
+		
 	};
 
 	$.mobile.changePage("#home");

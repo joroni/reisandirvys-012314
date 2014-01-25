@@ -5,6 +5,15 @@
 /* Global typography and design elements, stacked containers */
 body { font-family: 'Open Sans', Helvetica, san-serif !important; }
 
+content.ui-bar, .ui-body {
+    clear: both;
+    display: block;
+    margin: 45px auto !important;
+    overflow: hidden;
+    padding: 0.4em 15px;
+    position: relative;
+	    width: 88%;
+}
 
 div[data-role="header"] {
 	 /* background: none repeat scroll 0 0 #000000 !important;*/

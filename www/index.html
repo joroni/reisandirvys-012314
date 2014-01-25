@@ -29,19 +29,27 @@
       <!-- Start of loading page -->
       <div data-role="page" id="loading">
          <div data-role="header" data-position="fixed" data-id="bhead" class="ui-bar" data-theme="d">
+         <div style="padding-top:-10px;">
+         <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
+          <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
+           <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
+           <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
+           <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
+          </div>
+        
           <!--  <div class="btn-group fa-2x">
                <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
                             <a class="btn btn-default" href="#login"><i class="fa fa-user fa-1x"></i></a>
                   <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
             </div>-->
-            <!--<h1>Loading</h1>-->
+            <!--<h1>Loading</h1>
             <div class="btn-group fa-2x">
                <a class="btn btn-default" href="#home" data-theme="d"><i class="fa fa-home"></i></a>
                 <a class="btn btn-default" href="#login" id="footout"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" id="footout" href="#login" data-theme="d"><i class="fa fa-users"></i></a>
+                <a id="logout" class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
                <a class="btn btn-default" href="http://m.reisandirvys.com/polls" data-theme="d"><i class="fa fa-thumbs-up"></i></a>
                <a class="btn btn-default" href="#info" data-theme="d"><i class="fa fa-info"></i></a>
-                <a id="logoutli" class="btn btn-default" href="#" onClick="logout()"><i class="fa fa-power-off fa-1x"></i></a>
+                -->
             </div>
          </div>
          <!-- /header -->
@@ -72,14 +80,13 @@
       <div data-role="page" id="home">
          <div data-role="header" data-position="fixed" data-id="bhead" data-theme="a">
             <!--<h1>Home</h1>-->
-             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-theme="d"><i class="fa fa-home"></i></a>
-                <a class="btn btn-default" href="#login" id="footout"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" id="footout" href="#login" data-theme="d"><i class="fa fa-users"></i></a>
-               <a class="btn btn-default" href="http://m.reisandirvys.com/polls" data-theme="d"><i class="fa fa-thumbs-up"></i></a>
-               <a class="btn btn-default" href="#info" data-theme="d"><i class="fa fa-info"></i></a>
-                <a id="logoutli" class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>
+              <div style="padding-top:-10px;">
+         <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
+          <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
+           <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
+           <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
+           <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
+          </div>
          </div>
          <!-- /header -->
          <div data-role="content" class="ui-content">
@@ -162,12 +169,13 @@
       <!-- Start of Login page -->
       <div data-role="page" id="login">
          <div data-role="header" data-id="bhead" data-theme="a">
-          <div class="btn-group fa-2x">
+          <a class="btn btn-default" href="#" data-direction="reverse" data-rel="back"><i class="fa fa-arrow-left fa-1x"></i></a>
+          <!--<div class="btn-group fa-2x">
                <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
                <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>
-            <!--<h1>Login</h1>-->
+            </div>-->
+            <h1>Login</h1>
                <!-- <div class="btn-group fa-2x">
                <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
            <a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
