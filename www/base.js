@@ -143,7 +143,7 @@ function sendStory() {
 	uname = localStorage.phonegapName;
 	hash = localStorage.hash;
 	url = baseurl + '/phonegap/post';
-	$("#sentmessage").html('<img id="sending" title="sending" alt="sending" src="images/loadingt.gif" /><br /> Your Message is being sent. If this message does not change after two minutes, please check your network connectivity.')
+	$("#sentmessage").html('<img id="sending" title="sending" alt="sending" src="images/loader.gif" /><br /> Your Message is being sent. If this message does not change after two minutes, please check your network connectivity.')
 	$.post(url, {
 		username : uname,
 		password : hash,
