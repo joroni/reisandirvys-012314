@@ -29,29 +29,17 @@
       <!-- Start of loading page -->
       <div data-role="page" id="loading">
          <div data-role="header" data-position="fixed" data-id="bhead" class="ui-bar" data-theme="d">
-         <div style="padding-top:-10px;">
-         <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
-          <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
-           <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
-           <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
-           <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
-          </div>
+             <div style="padding-top:-10px;">
+             <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
+              <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
+               <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
+               <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
+               <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
+              </div>
         
-          <!--  <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-                            <a class="btn btn-default" href="#login"><i class="fa fa-user fa-1x"></i></a>
-                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-            </div>-->
-            <!--<h1>Loading</h1>
-            <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-theme="d"><i class="fa fa-home"></i></a>
-                <a class="btn btn-default" href="#login" id="footout"><i class="fa fa-user fa-1x"></i></a>
-                <a id="logout" class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-               <a class="btn btn-default" href="http://m.reisandirvys.com/polls" data-theme="d"><i class="fa fa-thumbs-up"></i></a>
-               <a class="btn btn-default" href="#info" data-theme="d"><i class="fa fa-info"></i></a>
-                -->
+         
             </div>
-         </div>
+      
          <!-- /header -->
          <div data-role="content">
             <div class="ui-body ui-body-c">
@@ -135,7 +123,7 @@
          <div data-role="content">
             <div class="ui-body ui-body-c">
                <p>
-                  <strong>Hi!  </strong>
+                  <strong>Hi! <div id="loggedin"></div> </strong>
                </p>
                <p>
                   On this app, you may be able to...
@@ -329,6 +317,8 @@
                <br/>
                <a data-role="button" data-theme="a">Save settings</a>
                <!-- onclick="saveSettings() -->
+               
+               
                <div data-role="page" id="sending">
                   <div data-role="header" data-id="bhead" data-theme="a">
                      <h1>Sending Story</h1>
@@ -352,11 +342,11 @@
                   </div>
                   <!-- /content -->
                   <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-                     <div class="btn-group fa-2x">
+                   <!--  <div class="btn-group fa-2x">
                         <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                         <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
                         <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-                     </div>
+                     </div>-->
                    <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                         <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
                   </div>
