@@ -31,9 +31,16 @@ div[data-role="header"] {
 
 
 #latestlist .content img {
-	max-width:280px;
+	max-width:250px;
 	height:auto;
 }
+
+#latestlist .content h1 a {
+	font-family: 'Open Sans', Helvetica, san-serif !important;
+	text-decoration:none;
+	color: #f10f93;
+}
+
 
 div[data-role="retail"] {
 	display:none !important;
