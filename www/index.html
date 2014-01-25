@@ -37,11 +37,11 @@
             <!--<h1>Loading</h1>-->
             <div class="btn-group fa-2x">
                <a class="btn btn-default" href="#home" data-theme="d"><i class="fa fa-home"></i></a>
-                <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+                <a class="btn btn-default" href="#login" id="footout"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" id="footout" href="#login" data-theme="d"><i class="fa fa-users"></i></a>
                <a class="btn btn-default" href="http://m.reisandirvys.com/polls" data-theme="d"><i class="fa fa-thumbs-up"></i></a>
                <a class="btn btn-default" href="#info" data-theme="d"><i class="fa fa-info"></i></a>
-                <a id="logoutli" class="btn btn-default" href="#" onClick="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+                <a id="logoutli" class="btn btn-default" href="#" onClick="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
          </div>
          <!-- /header -->
@@ -58,9 +58,9 @@
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
            <!-- <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a id="logoutli" class="btn btn-default" href="#" onClick="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+               <a id="logoutli" class="btn btn-default" href="#" onClick="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>-->
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
@@ -71,7 +71,15 @@
       <!-- Start of home page -->
       <div data-role="page" id="home">
          <div data-role="header" data-position="fixed" data-id="bhead" data-theme="a">
-            <h1>Home</h1>
+            <!--<h1>Home</h1>-->
+             <div class="btn-group fa-2x">
+               <a class="btn btn-default" href="#home" data-theme="d"><i class="fa fa-home"></i></a>
+                <a class="btn btn-default" href="#login" id="footout"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" id="footout" href="#login" data-theme="d"><i class="fa fa-users"></i></a>
+               <a class="btn btn-default" href="http://m.reisandirvys.com/polls" data-theme="d"><i class="fa fa-thumbs-up"></i></a>
+               <a class="btn btn-default" href="#info" data-theme="d"><i class="fa fa-info"></i></a>
+                <a id="logoutli" class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
+            </div>
          </div>
          <!-- /header -->
          <div data-role="content" class="ui-content">
@@ -81,13 +89,13 @@
                </p>
                <ul data-role="listview" data-inset="true" data-theme="d">
                   <li>
-                     <a onclick="how();">Getting started</a>
+                     <a onclick="how()">Getting started</a>
                   </li>
                   <li>
-                     <a onclick="addStory();">Upload an article</a>
+                     <a onclick="addStory()" href="#addstory">Upload an article</a>
                   </li>
                   <li>
-                     <a onclick="listArticles();">View Posts</a>
+                     <a onclick="listArticles()">View Posts</a>
                   </li>
                </ul>
             </div>
@@ -95,9 +103,9 @@
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a id="logoutli" class="btn btn-default" href="#" onClick="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+               <a id="logoutli" class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
@@ -109,11 +117,12 @@
       <div data-role="page" id="howitworks">
          <div data-role="header" data-id="bhead" data-theme="a">
             <h1>How It Works</h1>
-            <div class="btn-group fa-2x">
+            <a class="btn btn-default" href="#" data-direction="reverse" data-rel="back"><i class="fa fa-arrow-left fa-1x"></i></a>
+             <!--<div class="btn-group fa-2x">
                <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-               <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account();"><i class="fa fa-user fa-1x"></i></a>
-                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>-->
-            </div>
+              <a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
+                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
+            </div>-->
          </div>
          <!-- /header -->
          <div data-role="content">
@@ -140,7 +149,7 @@
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
@@ -153,12 +162,17 @@
       <!-- Start of Login page -->
       <div data-role="page" id="login">
          <div data-role="header" data-id="bhead" data-theme="a">
-            <h1>Login</h1>
-            <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-               <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account();"><i class="fa fa-user fa-1x"></i></a>
-                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>-->
+          <div class="btn-group fa-2x">
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
+               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
+            <!--<h1>Login</h1>-->
+               <!-- <div class="btn-group fa-2x">
+               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
+           <a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
+                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
+            </div>-->
          </div>
          <!-- /header -->
          <div data-role="content" class="ui-content">
@@ -178,16 +192,16 @@
                <div id="logmsg">
                </div>
                <p>
-                  <a data-role="button" onclick="saveLogin();" data-theme="d">Login</a>
+                  <a data-role="button" onclick="saveLogin()" data-theme="d">Login</a>
                </p>
             </div>
          </div>
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
@@ -209,9 +223,9 @@
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#logout" id="logoutli" onmousedown="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+               <a class="btn btn-default" href="#logout" id="logoutli" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
@@ -223,8 +237,8 @@
       <div data-role="page" id="addstory">
          <div data-role="header" data-id="bhead" data-theme="a">
             <h1>Send Us</h1>
-            <!-- <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
-               <a href="#info" data-icon="info" class="ui-btn-right">Info</a>-->
+             <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+               <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
          </div>
          <!-- /header -->
          <div id="addstorydiv" data-role="content">
@@ -239,15 +253,15 @@
             </div>
             <br/>
             <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="a">
-               <a data-role="button" data-theme="a" onclick="sendStory();"/>Send </a>
+               <a data-role="button" data-theme="a" onclick="sendStory()"/>Send </a>
             </div>
          </div>
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
@@ -258,10 +272,11 @@
       <!-- Start of info page -->
       <div data-role="page" id="info">
          <div data-role="header" data-id="bhead" data-theme="a">
+          <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
             <h1>Info</h1>
-            <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-            </div>
+            
+              
+            
          </div>
          <!-- /header -->
          <div data-role="content">
@@ -277,9 +292,9 @@
          <!-- /content -->
          <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
             <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
             </div>
             <!-- <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
@@ -293,7 +308,7 @@
             <h1>Settings</h1>
             <div class="btn-group fa-2x">
                <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-               <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account();"><i class="fa fa-user fa-1x"></i></a>
+               <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
                   <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>-->
             </div>
          </div>
@@ -309,13 +324,13 @@
                </input>
                <br/>
                <a data-role="button" data-theme="a">Save settings</a>
-               <!-- onclick="saveSettings(); -->
+               <!-- onclick="saveSettings() -->
                <div data-role="page" id="sending">
                   <div data-role="header" data-id="bhead" data-theme="a">
                      <h1>Sending Story</h1>
                      <div class="btn-group fa-2x">
                         <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-                        <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account();"><i class="fa fa-user fa-1x"></i></a>
+                        <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
                            <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>-->
                      </div>
                   </div>
@@ -334,9 +349,9 @@
                   <!-- /content -->
                   <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
                      <div class="btn-group fa-2x">
-                        <a class="btn btn-default" href="#login" id="footout" onmousedown="Account();"><i class="fa fa-user fa-1x"></i></a>
+                        <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
                         <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-                        <a class="btn btn-default" href="#" onmousedown="logout();"><i class="fa fa-power-off fa-1x"></i></a>
+                        <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
                      </div>
                    <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
                         <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
