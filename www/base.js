@@ -20,28 +20,28 @@ function onDeviceReady() {
 	}
 
 	if (username) {
-		$("#username").val(username);
+		$("#username").val();
 	}
 
 	if (title) {
-		$("#storytitle").val(title);
+		$("#storytitle").val();
 	};
 	if (story) {
-		$("#story").val(story);
+		$("#story").val();
 	};
 
 	if (view) {
-		$("#view").val(view);
+		$("#view").val();
 	};
 
 	if (display) {
-		$("#display").val(display);
+		$("#display").val();
 	};
 
 	if (localStorage.localLogin == 3) {
-		$("#logoutli").show();
+		//$("#logoutli").show();
 		$("#logout").show(); // CUSTOM
-		$("#loginli").hide();
+		//$("#loginli").hide();
 		$("#login").hide(); // CUSTOM
 		
 	} else {
@@ -50,7 +50,7 @@ function onDeviceReady() {
 		
 	};
 
-	$.mobile.changePage("#home");
+	$.mobile.changePage("#login");
 
 }
 
@@ -58,7 +58,7 @@ function saveSettings() {
 	baseurl = 'http://www.m.reisandirvys.com';
 	localStorage.baseUrl = baseurl;
 	localStorage.view = 'frontpage';
-	localStorage.display = 'polls';
+	localStorage.display = 'page';
 
 	//alert("Connected");
 
