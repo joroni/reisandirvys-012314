@@ -74,15 +74,16 @@ function saveSettings() {
 */
 function loginout() {
 	if (localStorage.localLogin != 3) {
-		$.mobile.changePage("#login");
+		$.mobile.changePage("#home");
 	} else {
 		logout();
 	}
 }
 
 function listArticles() {
-	url = baseurl + '/phonegap/display_view';
-	//url = baseurl + '/phonegap/frontpage';
+	//url = baseurl + '/phonegap/display_view';
+	url = baseurl + '/drupalgap/views_datasource/drupalgap_content';
+		
 	$username = '';
 	$("#latestlist").html("Retrieving Data...");
 	$.post(url, {
@@ -121,7 +122,8 @@ function saveLogin() {
 		if (password) {
 			localStorage.phonegapPass = password;
 			$("#logmsg").html("Settings for " + username + "trying to contact server ...");
-			purl = baseurl + '/phonegap/login';
+			//purl = baseurl + '/phonegap/login';
+			purl = baseurl + 'drupalgap/views_datasource/drupalgap_content';
 			$.ajax({
 				type : 'POST',
 				url : purl,
