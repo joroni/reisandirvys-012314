@@ -20,28 +20,28 @@ function onDeviceReady() {
 	}
 
 	if (username) {
-		$("#username").val();
+		$("#username").val(username);
 	}
 
 	if (title) {
-		$("#storytitle").val();
+		$("#storytitle").val(title);
 	};
 	if (story) {
-		$("#story").val();
+		$("#story").val(story);
 	};
 
 	if (view) {
-		$("#view").val();
+		$("#view").val(view);
 	};
 
 	if (display) {
-		$("#display").val();
+		$("#display").val(display);
 	};
 
 	if (localStorage.localLogin == 3) {
-		//$("#logoutli").show();
+		$("#logoutli").show();
 		$("#logout").show(); // CUSTOM
-		//$("#loginli").hide();
+		$("#loginli").hide();
 		$("#login").hide(); // CUSTOM
 		
 	} else {
@@ -50,7 +50,7 @@ function onDeviceReady() {
 		
 	};
 
-	$.mobile.changePage("#login");
+	$.mobile.changePage("#home");
 
 }
 
@@ -74,16 +74,15 @@ function saveSettings() {
 */
 function loginout() {
 	if (localStorage.localLogin != 3) {
-		$.mobile.changePage("#home");
+		$.mobile.changePage("#login");
 	} else {
 		logout();
 	}
 }
 
 function listArticles() {
-	//url = baseurl + '/phonegap/display_view';
-	url = baseurl + '/drupalgap/views_datasource/drupalgap_content';
-		
+	url = baseurl + '/phonegap/display_view';
+	//url = baseurl + '/phonegap/frontpage';
 	$username = '';
 	$("#latestlist").html("Retrieving Data...");
 	$.post(url, {
@@ -121,9 +120,8 @@ function saveLogin() {
 		localStorage.phonegapName = username;
 		if (password) {
 			localStorage.phonegapPass = password;
-			$("#logmsg").html("Settings for " + username + "trying to contact server ...");
-			//purl = baseurl + '/phonegap/login';
-			purl = baseurl + 'drupalgap/views_datasource/drupalgap_content';
+			$("#logmsg").html("Settings for " + username + " trying to contact server ...");
+			purl = baseurl + '/phonegap/login';
 			$.ajax({
 				type : 'POST',
 				url : purl,
@@ -149,7 +147,7 @@ function sendStory() {
 	uname = localStorage.phonegapName;
 	hash = localStorage.hash;
 	url = baseurl + '/phonegap/post';
-	$("#sentmessage").html('<img id="sending" title="sending" alt="sending" src="images/loader.gif" /><br /> Your Message is being sent. If this message does not change after two minutes, please check your network connectivity.')
+	$("#sentmessage").html('<img id="sending" title="sending" alt="sending" src="images/loadingt.gif" /><br /> Your Message is being sent. If this message does not change after two minutes, please check your network connectivity.')
 	$.post(url, {
 		username : uname,
 		password : hash,
