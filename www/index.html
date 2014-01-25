@@ -23,21 +23,56 @@
       <script type="text/javascript" src="jquery.mobile-1.0b2.min.js"></script>
       <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
       <script type="text/javascript" src="base.js"></script>
+       <style>
+        .nav-search .ui-btn-up-a {
+            background-image: none;
+            background-color: #333;
+        }
+        .nav-search .ui-btn-inner {
+            border-top: 1px solid #888;
+            border-color: rgba(255, 255, 255, .1);
+        }
+        .nav-search .ui-btn.ui-first-child {
+            border-top-width: 0;
+            background: #111;
+        }
+        .userform {
+			padding: .8em 1.2em;
+		}
+        .userform h2 {
+			color: #555;
+			margin: 0.3em 0 .8em 0;
+			padding-bottom: .5em;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+        .userform label {
+			display: block;
+			margin-top: 1.2em;
+		}
+        .ui-grid-a {
+			margin-top: 1em;
+			padding-top: .8em;
+			margin-top: 1.4em;
+			border-top: 1px solid rgba(0,0,0,.1);
+		}
+    </style>
       <title>Reis &amp; Irvys</title>
    </head>
    <body onload="onBodyLoad()">
       <!-- Start of loading page -->
       <div data-role="page" id="loading">
          <div data-role="header" data-position="fixed" data-id="bhead" class="ui-bar" data-theme="d">
+         
              <div style="padding-top:-10px;">
+              <a href="#nav-panel" data-theme="a" data-icon="bars" data-iconpos="notext">Menu</a>
              <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
               <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
                <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
-               <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
+               <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="check" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
                <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
               </div>
         
-         
+          
             </div>
       
          <!-- /header -->
@@ -62,6 +97,20 @@
                <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
          </div>
          <!-- /footer -->
+         
+         <div data-role="panel" data-position-fixed="true" data-theme="a" id="nav-panel">
+
+		<ul data-role="listview" data-theme="a" class="nav-search">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="#panel-fixed-page2">Accordion</a></li>
+                <li><a href="#panel-fixed-page2">AJAX Navigation</a></li>
+                <li><a href="#panel-fixed-page2">Autocomplete</a></li>
+                <li><a href="#panel-fixed-page2">Buttons</a></li>
+           
+		</ul>
+
+	</div><!-- /panel -->
+
       </div>
       <!-- /page -->
       <!-- Start of home page -->
