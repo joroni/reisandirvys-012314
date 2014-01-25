@@ -31,7 +31,7 @@ div[data-role="header"] {
 
 
 #latestlist .content img {
-	max-width:300px !important;
+	max-width:280px;
 	height:auto;
 }
 
