@@ -15,10 +15,10 @@ div[data-role="header"] {
 	
 }
 
-/*div[data-role="footer"] {
+div[data-role="footer"] {
 	display:none !important;
 	
-}*/
+}
 
 
 div[data-role="retail"] {
