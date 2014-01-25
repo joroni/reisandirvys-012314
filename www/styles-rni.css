@@ -24,11 +24,15 @@ div[data-role="header"] {
 	
 }
 
-div[data-role="footer"] {
+/*div[data-role="footer"] {
 	display:none !important;
 	
-}
+}*/
 
+
+#latestlist .content img {
+	max-width:300px !important;
+}
 
 div[data-role="retail"] {
 	display:none !important;
