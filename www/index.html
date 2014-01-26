@@ -13,40 +13,6 @@
 <script src="jquery.mobile-1.3.2.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 <script type="text/javascript" src="base.js"></script>
-<style>
-        .nav-search .ui-btn-up-a {
-            background-image: none;
-            background-color: #333;
-        }
-        .nav-search .ui-btn-inner {
-            border-top: 1px solid #888;
-            border-color: rgba(255, 255, 255, .1);
-        }
-        .nav-search .ui-btn.ui-first-child {
-            border-top-width: 0;
-            background: #111;
-        }
-        .userform {
-			padding: .8em 1.2em;
-		}
-        .userform h2 {
-			color: #555;
-			margin: 0.3em 0 .8em 0;
-			padding-bottom: .5em;
-			border-bottom: 1px solid rgba(0,0,0,.1);
-		}
-        .userform label {
-			display: block;
-			margin-top: 1.2em;
-		}
-        .ui-grid-a {
-			margin-top: 1em;
-			padding-top: .8em;
-			margin-top: 1.4em;
-			border-top: 1px solid rgba(0,0,0,.1);
-		}
-</style>
-</head>
 <body onload="onBodyLoad()">
 <!-- /page 1 -->
 <div data-role="page" class="jqm-demos ui-responsive-panel" id="loading">
@@ -87,9 +53,9 @@
 		<ul data-role="listview" data-theme="a" class="nav-search">
 			<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
 			<li><a href="#home">Start</a></li>
-			<li><a href="#login">My Account</a></li>
+			<li><a href="#login" id="loginli">My Account</a></li>
                     <ul data-role="listview" data-theme="a" class="nav-search">
-                    <li><a href="#logout" onMouseDown="logout();">Logout</a></li>
+                    <li><a href="#logout" id="logoutli" onMouseDown="logout();">Logout</a></li>
                     </ul>
 			<li><a href="#info">Info</a></li>
             <li><a href="#settings">Settings</a></li>
@@ -166,23 +132,20 @@
 			<input type="text" name="username" id="username" value="" data-clear-btn="true" data-mini="true">
 			<label for="password">Password:</label>
 			<input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
-			<div class="ui-grid-a">
-				<!--<div class="ui-block-a">
+			<!--<div class="ui-grid-a">
+				<div class="ui-block-a">
 					<a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a>
 				</div>-->
-             
-          <div id="logmsg">
-          </div>
-				<div class="ui-block-a">
-					<a href="#" data-rel="close" data-role="button" data-theme="c" onclick="saveLogin()" data-mini="true">Login</a>
+				<p>
+					<a href="#" id="loginli" data-rel="close" data-role="button" data-theme="c" onclick="saveLogin()" data-mini="true">Login</a>
+				</p>
+				<!--<div class="ui-block-b">
+					<a href="#" id="logoutli" data-rel="close" data-role="button" data-theme="c" onclick="logout()" data-mini="true">Logout</a>
 				</div>
-				<div class="ui-block-b">
-					<a href="#" data-rel="close" data-role="button" data-theme="c" onclick="logout()" data-mini="true">Logout</a>
-				</div>
-			</div>
+			</div>-->
 		</form>
 
-    <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+    <a href="#" id="backbtn" data-id="backbtn" data-icon="back" data-iconpos="left" data-inline="true" data-rel="back" data-role="button" data-mini="true">Back</a>
 		</div>
     <!-- /content -->
     </div>
@@ -253,7 +216,9 @@
     	<div  data-role="content"  class="jqm-content">
          <div class="ui-body ui-body-c">
           		URL<br/>
-               <input id="baseurl" type="text" disabled="true"> </input>  <br/>
+          		<input id="baseurl" type="text" disabled="true">
+          		</input>  
+          		<br/>
                  View<br/>
                <input id="view" type="text" disabled="true"></input>
                <br/>Page<br/>
@@ -349,30 +314,6 @@
          <!-- /content -->
     </div>
     <!-- /page 7 -->
-    
-    
-    
-       
-      <!-- /page 8 Logout-->
-<div data-role="page" id="logout">
-	<div data-role="header" data-theme="f">
-		<h1>Come back soon.</h1>
-	</div>
-	<!-- /header -->
-    
-    	<div data-role="content"  class="jqm-content">
-            <div class="ui-body ui-body-c">
-               
-               <p>
-                <a href="#login">Login</a></li>
-               </p>
-              
-            </div>
-         <a href="#login" data-role="button" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Login</a>
-           </div>
-         <!-- /content -->
-    </div>
-    <!-- /page 8 -->
     
   
 </body>
