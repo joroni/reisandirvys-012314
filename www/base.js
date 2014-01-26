@@ -74,6 +74,7 @@ function saveSettings() {
 */
 function loginout() {
 	if (localStorage.localLogin != 3) {
+		//$.mobile.changePage("#login");
 		$.mobile.changePage("#login");
 	} else {
 		logout();

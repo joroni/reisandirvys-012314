@@ -2,20 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1"> ORIG-->
-       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-      <title>Reis &amp; Irvys</title>
-      <link rel="stylesheet"  href="http://demos.jquerymobile.com/1.3.2/css/themes/default/jquery.mobile-1.3.2.min.css">
-    <link rel="stylesheet" href="http://demos.jquerymobile.com/1.3.2/_assets/css/jqm-demos.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel fixed positioning - jQuery Mobile Demos</title>
+    <link rel="stylesheet"  href="../../css/themes/default/jquery.mobile-1.3.2.min.css">
+    <link rel="stylesheet" href="../../_assets/css/jqm-demos.css">
+	<link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<script src="http://demos.jquerymobile.com/1.3.2/js/jquery.js"></script>
-    <script src="http://demos.jquerymobile.com/1.3.2/_assets/js/index.js"></script>
-    <script src="http://demos.jquerymobile.com/1.3.2/js/jquery.mobile-1.3.2.min.js"></script>
-     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-      <script type="text/javascript" src="base.js"></script>
-    
+	<script src="../../js/jquery.js"></script>
+    <script src="../../_assets/js/index.js"></script>
+    <script src="../../js/jquery.mobile-1.3.2.min.js"></script>
     <style>
         .nav-search .ui-btn-up-a {
             background-image: none;
@@ -50,13 +45,13 @@
 		}
     </style>
 </head>
-<body onload="onBodyLoad()">
-<div data-role="page" class="jqm-demos ui-responsive-panel" id="loading">
+<body>
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-fixed-page1">
 
     <div data-role="header" data-theme="f" data-position="fixed">
         <h1>Fixed header</h1>
         <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-        <a href="#login" data-icon="gear" data-iconpos="notext">Add</a>
+        <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
     </div><!-- /header -->
 
     <div data-role="content" class="jqm-content">
@@ -87,33 +82,56 @@
 
 		<ul data-role="listview" data-theme="a" class="nav-search">
             <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-                <li><a href="#panel-fixed-page2">Start</a></li>
+                <li><a href="#panel-fixed-page2">Accordion</a></li>
                 <li><a href="#panel-fixed-page2">AJAX Navigation</a></li>
                 <li><a href="#panel-fixed-page2">Autocomplete</a></li>
                 <li><a href="#panel-fixed-page2">Buttons</a></li>
                 <li><a href="#panel-fixed-page2">Checkboxes</a></li>
                 <li><a href="#panel-fixed-page2">Collapsibles</a></li>
                 <li><a href="#panel-fixed-page2">Controlgroup</a></li>
- 
+                <li><a href="#panel-fixed-page2">Dialogs</a></li>
+                <li><a href="#panel-fixed-page2">Fixed toolbars</a></li>
+                <li><a href="#panel-fixed-page2">Flip switch toggle</a></li>
+                <li><a href="#panel-fixed-page2">Footer toolbar</a></li>
+                <li><a href="#panel-fixed-page2">Form elements</a></li>
+                <li><a href="#panel-fixed-page2">Grids</a></li>
+                <li><a href="#panel-fixed-page2">Header toolbar</a></li>
+                <li><a href="#panel-fixed-page2">Icons</a></li>
+                <li><a href="#panel-fixed-page2">Links</a></li>
+                <li><a href="#panel-fixed-page2">Listviews</a></li>
+                <li><a href="#panel-fixed-page2">Loader overlay</a></li>
+                <li><a href="#panel-fixed-page2">Navbar</a></li>
+                <li><a href="#panel-fixed-page2">Navbar, persistent</a></li>
+                <li><a href="#panel-fixed-page2">Pages</a></li>
+                <li><a href="#panel-fixed-page2">New</span></a></li>
+                <li><a href="#panel-fixed-page2">Popup</a></li>
+                <li><a href="#panel-fixed-page2">Radio buttons</a></li>
+                <li><a href="#panel-fixed-page2">Select</a></li>
+                <li><a href="#panel-fixed-page2">Slider, single</a></li>
+                <li><a href="#panel-fixed-page2">New</span></a></li>
+                <li><a href="#panel-fixed-page2">New</span></a></li>
+                <li><a href="#panel-fixed-page2">New</span></a></li>
+                <li><a href="#panel-fixed-page2">Text inputs & textarea</a></li>
+                <li><a href="#panel-fixed-page2">Transitions</a></li>
 		</ul>
 
 	</div><!-- /panel -->
 
-
-	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="login">
+	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="add-form">
 
         <form class="userform">
-			<h2>Login</h2>
 
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" value="" data-clear-btn="true" data-mini="true">
+        	<h2>Login</h2>
+
+            <label for="name">Username:</label>
+            <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
 
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
 
             <div class="ui-grid-a">
                 <div class="ui-block-a"><a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a></div>
-                <div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" onClick="saveLogin()" data-mini="true">Save</a></div>
+                <div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">Save</a></div>
 			</div>
         </form>
 
@@ -131,7 +149,7 @@
 
         <p>This is just a landing page.</p>
 
-        <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+        <a href="#panel-fixed-page1" data-role="button" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
 
     </div><!-- /content -->
 
