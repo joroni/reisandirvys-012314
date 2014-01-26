@@ -176,6 +176,7 @@ function logout() {
 	$("#footout").fadeOut();
 }
 
+$("#logmsg").html("Settings for " + username + " trying to contact server ...");
 function how() {
 	$.mobile.changePage("#howitworks");
 }
@@ -202,6 +203,7 @@ function addStory() {
 
 function onBodyLoad() {
 	document.addEventListener("deviceready", onDeviceReady, false);
+	$("#loggedin").html(username);
 }
 
 function isNumeric(input) {
