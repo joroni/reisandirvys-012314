@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html class="ui-mobile">
-   <head>
-      <!-- Basic Page Needs
-         ================================================== -->
-      <meta charset="utf-8" />
-      <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
-      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-      <meta name="description" content="Font Awesome, the iconic font designed for Bootstrap">
-      <meta name="author" content="Dave Gandy">
-      <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-      <!-- CSS
-         ================================================== -->
-      <link rel="stylesheet" href="../assets/css/site.css">
-      <link rel="stylesheet" href="../assets/css/pygments.css">
-      <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
-      <link rel="stylesheet" href="jquery.mobile-1.0b2.min.css"/>
-      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-      <link href="font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-      <link rel="stylesheet" href="drupalgap.css"/>
-      <link rel="stylesheet" href="styles-rni.css"/>
-      <script type="text/javascript" src="jquery-1.6.2.min.js"></script>
-      <script type="text/javascript" src="jquery.mobile-1.0b2.min.js"></script>
-      <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-      <script type="text/javascript" src="base.js"></script>
-       <style>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1"> ORIG-->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Reis &amp; Irvys</title>
+<link rel="stylesheet" href="http://demos.jquerymobile.com/1.3.2/css/themes/default/jquery.mobile-1.3.2.min.css">
+<link rel="stylesheet" href="http://demos.jquerymobile.com/1.3.2/_assets/css/jqm-demos.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+<script src="http://demos.jquerymobile.com/1.3.2/js/jquery.js"></script>
+<script src="http://demos.jquerymobile.com/1.3.2/_assets/js/index.js"></script>
+<script src="http://demos.jquerymobile.com/1.3.2/js/jquery.mobile-1.3.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<script type="text/javascript" src="base.js"></script>
+<style>
         .nav-search .ui-btn-up-a {
             background-image: none;
             background-color: #333;
@@ -55,82 +45,96 @@
 			margin-top: 1.4em;
 			border-top: 1px solid rgba(0,0,0,.1);
 		}
-    </style>
-      <title>Reis &amp; Irvys</title>
-   </head>
-   <body onload="onBodyLoad()">
-      <!-- Start of loading page -->
-      <div data-role="page" id="loading">
-         <div data-role="header" data-position="fixed" data-id="bhead" class="ui-bar" data-theme="d">
-         
-             <div style="padding-top:-10px;">
-              <a href="#nav-panel" data-theme="a" data-icon="bars" data-iconpos="notext">Menu</a>
-             <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
-              <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
-               <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
-               <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="check" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
-               <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
-              </div>
-        
-          
-            </div>
-      
-         <!-- /header -->
-         <div data-role="content">
-            <div class="ui-body ui-body-c">
+</style>
+</head>
+<body onload="onBodyLoad()">
+<!-- /page 1 -->
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="loading">
+	<div data-role="header" data-theme="f" data-position="fixed">
+		<h1>Fixed header</h1>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#login" data-icon="gear" data-iconpos="notext">Add</a>
+	</div>
+	<!-- /header -->
+	<div data-role="content" class="jqm-content">
+		<!--<h1>Panels</h1>
+		<h2>Fixed positioning</h2>-->
+		<p>
+		
                <center>
                   <img src="images/logo.png">
                </center>
                <center>
                   <img src="images/my_story.png">
                </center>
-            </div>
-         </div>
-         <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-           <!-- <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a id="logoutli" class="btn btn-default" href="#" onClick="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>-->
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-         
-         <div data-role="panel" data-position-fixed="true" data-theme="a" id="nav-panel">
-
-		<ul data-role="listview" data-theme="a" class="nav-search">
-            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-                <li><a href="#panel-fixed-page2">Accordion</a></li>
-                <li><a href="#panel-fixed-page2">AJAX Navigation</a></li>
-                <li><a href="#panel-fixed-page2">Autocomplete</a></li>
-                <li><a href="#panel-fixed-page2">Buttons</a></li>
            
+		</p>
+		<!--<a href="./" class="jqm-button" data-ajax="false" data-role="button" data-mini="true" data-inline="true" data-icon="arrow-l" data-iconpos="left">Back to Panels</a>-->
+		<div data-demo-html="#panel-fixed-page1" data-demo-css="true">
+		</div>
+		<!--/demo-html -->
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-position="fixed" data-theme="f">
+		<a href="http:www.reisandirvys.com" target="_blank">www.reisandirvys.com</a>
+         <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+                        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+	</div>
+	<!-- /footer -->
+    
+    <!-- panel left -->
+	<div data-role="panel" data-position-fixed="true" data-theme="a" id="nav-panel">
+		<ul data-role="listview" data-theme="a" class="nav-search">
+			<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+			<li><a href="#home">Start</a></li>
+			<li><a href="#login">My Account</a></li>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                    <li><a href="#logout" onMouseDown="logout();">Logout</a></li>
+                    </ul>
+			<li><a href="#info">Info</a></li>
+            <li><a href="#settings">Settings</a></li>
+			<!--<li><a href="#panel-fixed-page2">Checkboxes</a></li>
+			<li><a href="#panel-fixed-page2">Collapsibles</a></li>
+			<li><a href="#panel-fixed-page2">Controlgroup</a></li>-->
 		</ul>
+	</div>
+	<!-- /panel left -->
+    
+    
+    <!-- /panel right -->
+	<!--<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="login">
+		<form class="userform">
+			<h2>Login</h2>
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" data-clear-btn="true" data-mini="true">
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-rel="close" data-role="button" data-theme="b" onclick="saveLogin()" data-mini="true">Login</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="#" data-rel="close" data-role="button" data-theme="b" onclick="logout()" data-mini="true">Logout</a>
+				</div>
+			</div>
+		</form>
+	</div>-->
+	<!-- /panel right -->
+</div>
+<!-- /page 1 -->
 
-	</div><!-- /panel -->
 
-      </div>
-      <!-- /page -->
-      <!-- Start of home page -->
-      <div data-role="page" id="home">
-         <div data-role="header" data-position="fixed" data-id="bhead" data-theme="a">
-            <!--<h1>Home</h1>-->
-              <div style="padding-top:-10px;">
-         <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Start Here</a>
-          <a href="#login" data-role="button" data-icon="gear" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Login</a>
-           <a href="#home" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true" onmousedown="logout()">Logout</a>
-           <a href="http://m.reisandirvys.com/polls" data-role="button" data-icon="delete" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">Vote</a>
-           <a href="#info" data-role="button" data-icon="info" data-iconpos="bottom" data-theme="a" data-iconshadow="true" data-inline="true">About</a>
-          </div>
-         </div>
-         <!-- /header -->
-         <div data-role="content" class="ui-content">
-            <div class="ui-body ui-body-c">
-               <p>
-                  We would like to hear from you.
-               </p>
+<!-- /page 2 -->
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="f">
+		<h1>Welcome</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content" class="jqm-content">
+		 <p>We would like to hear from you.</p>
                <ul data-role="listview" data-inset="true" data-theme="d">
                   <li>
                      <a onclick="how()">Getting started</a>
@@ -142,37 +146,185 @@
                      <a onclick="listArticles()">View Posts</a>
                   </li>
                </ul>
+		<a href="#loading" data-role="button" data-inline="true" data-mini="true" data-icon="home" data-iconpos="left">Home</a>
+	</div>
+	<!-- /content -->
+</div>
+<!-- /page 2 -->
+
+
+<!-- /page 3 -->
+<div data-role="page" id="login">
+	<div data-role="header" data-theme="f">
+		<h1>Login</h1>
+	</div>
+	<!-- /header -->
+    	<div data-role="content" class="jqm-content">
+		<form class="userform">
+			<h2>My Account</h2>
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" data-clear-btn="true" data-mini="true">
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+			<div class="ui-grid-a">
+				<!--<div class="ui-block-a">
+					<a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a>
+				</div>-->
+				<div class="ui-block-a">
+					<a href="#" data-rel="close" data-role="button" data-theme="c" onclick="saveLogin()" data-mini="true">Login</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-rel="close" data-role="button" data-theme="c" onclick="logout()" data-mini="true">Logout</a>
+				</div>
+			</div>
+		</form>
+
+    <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+		</div>
+    <!-- /content -->
+    </div>
+    <!-- /page 3 -->
+    
+    
+    
+    
+    
+    
+    <!-- Start of articles page 3.1 -->
+      <div data-role="page" id="stories">
+         <div data-role="header" data-id="bhead" data-theme="a">
+            <h1>Articles</h1>
+           <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
             </div>
+         <!-- /header -->
+         <div id="latestlist" data-role="content">
          </div>
          <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-           <!-- <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a id="logoutli" class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
+    
+    </div>
+    <!-- page 3.1å -->
+    
+    
+    
+    
+    <!-- /page 4 Send Articles-->
+<div data-role="page" id="addstory">
+	<div data-role="header" data-theme="f">
+		<h1>Send Us</h1>
+	</div>
+	<!-- /header -->
+    
+    	<div id="addstorydiv" data-role="content"  class="jqm-content">
+            <!--<div id="title" class="rounded left"> 
+               Title
             </div>-->
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-      </div>
-      <!-- /page -->
-      <!-- Start of How It Works page -->
-      <div data-role="page" id="howitworks">
-         <div data-role="header" data-id="bhead" data-theme="a">
-            <h1>How It Works</h1>
-            <a class="btn btn-default" href="#" data-direction="reverse" data-rel="back"><i class="fa fa-arrow-left fa-1x"></i></a>
-             <!--<div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-              <a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
-                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-            </div>-->
-         </div>
-         <!-- /header -->
-         <div data-role="content">
+            <label id="title" for="storytitle">Title:</label>
+            <p><input id "storytitle" type="text" class="textround" name="storytitle"/></p>
+            <p><textarea id="story" class="arearound" style="overflow-y:scroll;" name="story" cols=45 rows=8></textarea></p>
+            <div id="result">
+            </div>
+            <br/>
+        <!--    <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="a">-->
+            <p>
+            <a href="#" data-ajax="false" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="left">Cancel</a>
+            </p>
+            <p>
+            <a href="#" data-ajax="false" onclick="sendStory()" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-iconpos="left">Send</a>
+            	<!--<a data-role="button" data-theme="a" data-rel="back" data-inline="true">Cancel</a>
+              	<a data-role="button" data-theme="a" onclick="sendStory()"  data-inline="true">Send </a>-->
+            </p>
+  </div>
+         <!-- /content -->
+    </div>
+    <!-- /page 4 -->
+    
+    
+    
+     <!-- /page 5 Settings-->
+<div data-role="page" id="settings">
+	<div data-role="header" data-theme="f">
+		<h1>Settings</h1>
+	</div>
+	<!-- /header -->
+    
+    	<div  data-role="content"  class="jqm-content">
+         <div class="ui-body ui-body-c">
+          		URL<br/>
+               <input id="baseurl" type="text" disabled="true"> </input>  <br/>
+                 View<br/>
+               <input id="view" type="text" disabled="true"></input>
+               <br/>Page<br/>
+               <input id="display" type="text" disabled="true">
+               </input>
+               <br/>
+               <a data-role="button" data-theme="a">Save settings</a>
+                   <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+               <!-- onclick="saveSettings() -->
+               </div>
+           </div>
+         <!-- /content -->
+    </div>
+    <!-- /page 5 -->
+    
+    
+    
+      <!-- /page 6 Sending-->
+<div data-role="page" id="sending">
+	<div data-role="header" data-theme="f">
+		<h1>Sending Story</h1>
+	</div>
+	<!-- /header -->
+    
+    	<div data-role="content"  class="jqm-content">
+                <div id="sentmessage">
+                               <p> Your message is being sent. </p>
+                               <p> If this message does not disappear in 2 minutes, </p>
+                               <p> please check your connection and try again. </p>
+                </div>
+                 <br/>
+                 <div id="storylist"></div>
+           </div>
+         <!-- /content -->
+    </div>
+    <!-- /page 6 -->
+    
+
+
+    
+      <!-- /page 7 Info-->
+<div data-role="page" id="info">
+	<div data-role="header" data-theme="f">
+		<h1>Info</h1>
+	</div>
+	<!-- /header -->
+    
+    	<div data-role="content"  class="jqm-content">
+                <p>
+               <center><img src="logo.png" width="200"></center>
+               </p>
+               For more information go to <a href='http://www.reisandirvys.com'>www.reisandirvys.com</a>
+               <br/>
+               </p>
+                  <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+           </div>
+         <!-- /content -->
+    </div>
+    <!-- /page 7 -->
+    
+    
+    
+    
+      <!-- /page 7 Info-->
+<div data-role="page" id="howitworks">
+	<div data-role="header" data-theme="f">
+		<h1>Get Started</h1>
+	</div>
+	<!-- /header -->
+    
+    	<div data-role="content"  class="jqm-content">
             <div class="ui-body ui-body-c">
                <p>
-                  <strong>Hi! <div id="loggedin"></div> </strong>
+                  <strong>Hi! <div id="loggedin"></div>  </strong>
                </p>
                <p>
                   On this app, you may be able to...
@@ -187,225 +339,14 @@
                   4. Suggest<br/>
                   5. Win a free FROYO treat!
                </p>
-               <p>$username</p>
-            </div>
-         </div>
-         <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-            <!--<div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>-->
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-      </div>
-      <!-- /page -->
-      <!-- /panel -->
-      <!-- Start of Login page -->
-      <div data-role="page" id="login">
-         <div data-role="header" data-id="bhead" data-theme="a">
-          <a class="btn btn-default" href="#" data-direction="reverse" data-rel="back"><i class="fa fa-arrow-left fa-1x"></i></a>
-          <!--<div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>-->
-            <h1>Login</h1>
-               <!-- <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-           <a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
-                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-            </div>-->
-         </div>
-         <!-- /header -->
-         <div data-role="content" class="ui-content">
-            <div class="ui-body ui-body-c">
-               <p>
-                  Username <input id="username" type="text">
-                  </input>
-               </p>
-               <p>
-                  Password <input id="password" type="password">
-                  </input>
-               <ul>
-                  <li><a href="http://m.reisandirvys.com/user/register" target="_blank">Create an account</a></li>
-                  <li><a href="http://m.reisandirvys.com/user/password" target="_blank">Request Password</a></li>
-               </ul>
-               </p>
-               <div id="logmsg">
-               </div>
-               <p>
-                  <a data-role="button" onclick="saveLogin()" data-theme="d">Login</a>
-               </p>
-            </div>
-         </div>
-         <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-          <!--  <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>-->
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-      </div>
-      <!-- /page -->
-      <!-- Start of articles page -->
-      <div data-role="page" id="stories">
-         <div data-role="header" data-id="bhead" data-theme="a">
-            <h1>Articles</h1>
-            <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-            </div>
-         </div>
-         <!-- /header -->
-         <div id="latestlist" data-role="content">
-         </div>
-         <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-           
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-      </div>
-      <!-- /page -->
-      <!-- Start of add Articles page -->
-      <div data-role="page" id="addstory">
-         <div data-role="header" data-id="bhead" data-theme="a">
-            <h1>Send Us</h1>
-             <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
-               <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
-         </div>
-         <!-- /header -->
-         <div id="addstorydiv" data-role="content">
-            <div id="title" class="rounded left">
-               Title
-            </div>
-            <input id "storytitle" type="text" class="textround" name="storytitle"/>
-            <br/>
-            <textarea id="story" class="arearound" style="overflow-y:scroll;" name="story" cols=45 rows=8></textarea>
-            <br/>
-            <div id="result">
-            </div>
-            <br/>
-            <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="a">
-               <a data-role="button" data-theme="a" onclick="sendStory()"/>Send </a>
-            </div>
-         </div>
-         <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-        <!--    <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>-->
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-      </div>
-      <!-- /page -->
-      <!-- Start of info page -->
-      <div data-role="page" id="info">
-         <div data-role="header" data-id="bhead" data-theme="a">
-          <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-            <h1>Info</h1>
-            
               
-            
-         </div>
-         <!-- /header -->
-         <div data-role="content">
-            <div class="ui-body ui-body-c">
-               <p>
-               <center><img src="logo.png" width="200"></center>
-               </p>
-               For more information go to <a href='http://www.reisandirvys.com'>www.reisandirvys.com</a>
-               <br/>
-               </p>
             </div>
-         </div>
+         <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+           </div>
          <!-- /content -->
-         <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-          <!--  <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-               <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-               <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-            </div>-->
-             <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-               <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-         </div>
-         <!-- /footer -->
-      </div>
-      <!-- /page -->
-      <!-- Start of settings page -->
-      <div data-role="page" id="settings">
-         <div data-role="header" data-id="bhead" data-theme="a">
-            <h1>Settings</h1>
-            <div class="btn-group fa-2x">
-               <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-               <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
-                  <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>-->
-            </div>
-         </div>
-         <!-- /header -->
-         <div data-role="content">
-            <div class="ui-body ui-body-c">
-               URL<br/>
-               <input id="baseurl" type="text" disabled="true"> </input>  <br/>
-                 View<br/>
-               <input id="view" type="text" disabled="true"></input>
-               <br/>Page<br/>
-               <input id="display" type="text" disabled="true">
-               </input>
-               <br/>
-               <a data-role="button" data-theme="a">Save settings</a>
-               <!-- onclick="saveSettings() -->
-               
-               
-               <div data-role="page" id="sending">
-                  <div data-role="header" data-id="bhead" data-theme="a">
-                     <h1>Sending Story</h1>
-                     <div class="btn-group fa-2x">
-                        <a class="btn btn-default" href="#home" data-direction="reverse"><i class="fa fa-home fa-1x"></i></a>
-                        <!--<a class="btn btn-default" href="#login"  id="footout" onMouseDown="Account()"><i class="fa fa-user fa-1x"></i></a>
-                           <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>-->
-                     </div>
-                  </div>
-                  <!-- /header -->
-                  <div data-role="content">
-                     <div class="ui-body ui-body-c">
-                        <div id="sentmessage">
-                           <p> Your message is being sent. </p>
-                           <p> If this message does not disappear in 2 minutes, </p>
-                           <p> please check your connection and try again. </p>
-                        </div>
-                        <br/>
-                        <div id="storylist"></div>
-                     </div>
-                  </div>
-                  <!-- /content -->
-                  <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="a">
-                   <!--  <div class="btn-group fa-2x">
-                        <a class="btn btn-default" href="#login" id="footout" onmousedown="Account()"><i class="fa fa-user fa-1x"></i></a>
-                        <a class="btn btn-default" href="#info"><i class="fa fa-info fa-1x"></i></a>
-                        <a class="btn btn-default" href="#" onmousedown="logout()"><i class="fa fa-power-off fa-1x"></i></a>
-                     </div>-->
-                   <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-                        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
-                  </div>
-                  <!-- /footer -->
-               </div>
-            </div>
-         </div>
-         <!-- /content -->
-      </div>
-      <!-- /page -->
-      <!-- Start of sending page --><!-- /page -->
-   </body>
+    </div>
+    <!-- /page 7 -->
+    
+  
+</body>
 </html>
