@@ -1,5 +1,5 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#login";
+var nextpage = "#home";
 var view = "frontpage";
 var display = "poll";
 
@@ -12,10 +12,17 @@ function onDeviceReady() {
 	blat = localStorage.phonegapLat;
 	blong = localStorage.phonegapLong;
 	baseurl = localStorage.baseUrl;
+	//baseurl = 'http://www.m.reisandirvys.com';
 	view = localStorage.view;
 	display = localStorage.display;
+	
 
-	if (baseurl) {
+	$("#baseurl").val(baseurl);
+		$("#username").val(username);
+		$("#storytitle").val(title);
+			$("#view").val(view);
+			$("#display").val(display);
+	/*if (baseurl) {
 		$("#baseurl").val(baseurl);
 	}
 
@@ -37,12 +44,14 @@ function onDeviceReady() {
 	if (display) {
 		$("#display").val(display);
 	};
-
+*/
 	if (localStorage.localLogin == 3) {
 		$("#logoutli").show();
-		$("#logout").show(); // CUSTOM
+		//$("#logout").show(); // CUSTOM
 		$("#loginli").hide();
-		$("#login").hide(); // CUSTOM
+		//$("#logoutbtn").hide(); // CUSTOM
+		//$("#loginbtn").hide(); // CUSTOM
+		//$("#login").hide(); // CUSTOM
 		
 	} else {
 
@@ -50,7 +59,7 @@ function onDeviceReady() {
 		
 	};
 
-	$.mobile.changePage("#home");
+	$.mobile.changePage("#login");
 
 }
 
@@ -173,12 +182,15 @@ function logout() {
 	$("#password").val("");
 	$("#logoutli").hide();
 	$("#loginli").show();
+	//$("#logoutbtn").hide();
+	//$("#loginbtn").show();
 	$("#footout").fadeOut();
 }
 
 $("#logmsg").html("Settings for " + username + " trying to contact server ...");
 function how() {
 	$.mobile.changePage("#howitworks");
+	//$.username.html("#loggedin");
 }
 
 function clearData() {
@@ -188,7 +200,7 @@ function clearData() {
 	localStorage.localLogin = 5;
 	$("#username").val("");
 	$("#password").val("");
-	$("#logoutlia").val("#login");
+	$("#logoutlia").val("Login");
 	clearStoryData();
 }
 
@@ -203,10 +215,21 @@ function addStory() {
 
 function onBodyLoad() {
 	document.addEventListener("deviceready", onDeviceReady, false);
-	$("#loggedin").html(username);
+	//$("#loggedin").html(username);
 }
 
 function isNumeric(input) {
 	return (input - 0) == input && input > 0;
 }
- saveSettings();
+
+/*$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+*//// GUIDE ONLY
+
+ saveSettings();;
+$("backbtn").hide();
